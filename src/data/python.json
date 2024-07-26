@@ -1,0 +1,62 @@
+[
+    {
+      "title": "Setting Up Python",
+      "description": "Instructions for downloading and installing Python from the official website.",
+      "snippet": "First, ensure that Python is installed on your computer. You can download it from the \n[official Python website](https://www.python.org/). Follow the installation instructions for your operating system."
+    },
+    {
+      "title": "Writing Your First Python Program",
+      "description": "A step-by-step guide to writing and running a simple 'Hello, World!' program.",
+      "snippet": "Open a text editor or an IDE, type the code \n`print('Hello, World!')`, save the file with a `.py` extension, and run it using `python filename.py`."
+    },
+    {
+      "title": "Variables and Data Types",
+      "description": "Introduction to variables and different data types in Python.",
+      "snippet": "# Integer\nx = 5\n\n# Float\ny = 3.14\n\n# String\nname = 'Alice'\n\n# Boolean\nis_student = True"
+    },
+    {
+      "title": "Basic Operations",
+      "description": "Performing arithmetic operations using standard operators.",
+      "snippet": "a = 10\nb = 3\n\nprint(a + b)  # 13\nprint(a - b)  # 7\nprint(a * b)  # 30\nprint(a / b)  # 3.333...\nprint(a % b)  # 1"
+    },
+    {
+      "title": "Conditional Statements",
+      "description": "Using `if`, `elif`, and `else` for conditional logic.",
+      "snippet": "age = 18\n\nif age >= 18:\n    print('You are an adult.')\nelif age >= 13:\n    print('You are a teenager.')\nelse:\n    print('You are a child.')"
+    },
+    {
+      "title": "Loops",
+      "description": "Using `for` and `while` loops to iterate over sequences.",
+      "snippet": "# For loop\nfor i in range(5):\n    print(i)  # 0, 1, 2, 3, 4\n\n# While loop\ncount = 0\nwhile count < 5:\n    print(count)  # 0, 1, 2, 3, 4\n    count += 1"
+    },
+    {
+      "title": "Functions",
+      "description": "Defining and calling functions in Python.",
+      "snippet": "def greet(name):\n    return f'Hello, {name}!'\n\nprint(greet('Alice'))  # Hello, Alice!"
+    },
+    {
+      "title": "Lists",
+      "description": "Creating and manipulating lists in Python.",
+      "snippet": "fruits = ['apple', 'banana', 'cherry']\n\nprint(fruits[0])  # apple\nfruits.append('orange')\nprint(fruits)  # ['apple', 'banana', 'cherry', 'orange']"
+    },
+    {
+      "title": "Dictionaries",
+      "description": "Creating and manipulating dictionaries in Python.",
+      "snippet": "person = {\n    'name': 'Alice',\n    'age': 25,\n    'is_student': True\n}\n\nprint(person['name'])  # Alice\nperson['age'] = 26\nprint(person)  # {'name': 'Alice', 'age': 26, 'is_student': True}"
+    },
+    {
+      "title": "Modules and Libraries",
+      "description": "Importing and using libraries in Python.",
+      "snippet": "import math\n\nprint(math.sqrt(16))  # 4.0"
+    },
+    {
+      "title": "File Handling",
+      "description": "Reading from and writing to files in Python.",
+      "snippet": "# Writing to a file\nwith open('example.txt', 'w') as file:\n    file.write('Hello, World!')\n\n# Reading from a file\nwith open('example.txt', 'r') as file:\n    content = file.read()\n    print(content)  # Hello, World!"
+    },
+    {
+      "title": "Error Handling",
+      "description": "Using try-except blocks to handle exceptions.",
+      "snippet": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('You cannot divide by zero!')"
+    }
+  ]
