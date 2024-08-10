@@ -1,9 +1,9 @@
-# React + Vite
+# CodeMore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a website where students from all levels of knowledge about programming languages can learn and revise to hone their programming skills.
+We provide roadmaps, summaries, notes to empower students' learning process.
 
-Currently, two official plugins are available:
+Currently, some features are being worked on.
+You can visit the website and view the resources here
+- [CodeMore]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# CodeMoreWeb
