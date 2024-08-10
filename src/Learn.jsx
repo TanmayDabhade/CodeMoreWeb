@@ -8,7 +8,7 @@ import CodeSnippet from './CodeSnippet'
 
 
 const navigation = [
-  { name: 'Product', href: '/about' },
+  { name: 'Learn', href: '/learn' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
   { name: 'Company', href: '#' },
