@@ -2121,12 +2121,11 @@ export default function Learn() {
               Choose Language
             </label>
             <select
-            
               id="assignedTo"
               value={selectedOption}
               onChange={handleSelectChange}
-              className="block h-12 w-64 p-4.5 text-lg bg-white text-gray-900 border  rounded-lg focus:ring-blue-500 focus:border-blue-500"
-            >
+              className="h-12 w-64 p-4.5 text-lg text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              >
               {options.map((option) => (
                 <option key={option} value={option} className="p-2 text-lg">
                   {option}
