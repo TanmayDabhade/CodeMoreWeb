@@ -9,13 +9,13 @@ import About from './About'
 
 
 const navigation = [
-  { name: 'Beginner', href: '/learn' },
-  { name: 'Intermediate', href: '/underprogress' },
-  { name: 'Advanced', href: '/underprogress' },
-  { name: 'Projects', href: '/underprogress' },
-]
+    { name: 'Beginner', href: '/learn' },
+    { name: 'Intermediate', href: '/underprogress' },
+    { name: 'Advanced', href: '/underprogress' },
+    { name: 'Projects', href: '/underprogress' },
+  ]
 
-export default function Home() {
+export default function Undeveloped() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -24,7 +24,7 @@ export default function Home() {
           <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
             <div className="flex lg:flex-1">
               <Link to="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Code More</span>
+                <span className="sr-only">Your Company</span>
                 <h1 className='text-xl font-bold text-indigo-700'>CodeMore</h1>
               </Link>
             </div>
@@ -113,31 +113,29 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            {/* <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Adding more languages soon.{' '}
-              {/* <a href="#" className="font-semibold text-indigo-600">
+              <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                  <span aria-hidden="true">&rarr;</span>
-              </a> */}
-            </div>
+              </a>
+            </div> */}
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              CodeMore
+              Content for this page is still being developed.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            Learn the essentials of any programming language quickly and efficiently. Whether you're a beginner or looking to upskill, our platform offers concise tutorials and hands-on practice across multiple languages. Start your coding journey with CodeMore and become a versatile developer today!
+
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                to="/community"
+                to="/learn"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Join Community
+                Start Learning till then!
               </Link>
-              <a href="/underprogress" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -155,7 +153,7 @@ export default function Home() {
         </div>
       </div>
 
-
+      <Footer />
     </div>
   )
 }

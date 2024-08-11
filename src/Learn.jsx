@@ -5,15 +5,14 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import CodeSnippet from './CodeSnippet'
-
+import Footer from './Footer'
 
 const navigation = [
-  { name: 'Learn', href: '/learn' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Beginner', href: '/learn' },
+  { name: 'Intermediate', href: '/underprogress' },
+  { name: 'Advanced', href: '/underprogress' },
+  { name: 'Projects', href: '/underprogress' },
 ]
-
 
 export default function Learn() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -2092,7 +2091,7 @@ export default function Learn() {
         <div className=" absolute inset-0 -z-10 overflow-hidden">
           <svg
             aria-hidden="true"
-            className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+            className="absolute left-[max(50%,25rem)] top-0 h-[128rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(128rem_128rem_at_top,white,transparent)]"
           >
             <defs>
               <pattern
@@ -2141,7 +2140,7 @@ export default function Learn() {
       <div className="">
         <p className="text-base font-semibold leading-7 text-indigo-600">Beginner</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          {selectedOption === 'Cpp' ? 'C++' : selectedOption} Basics
+          {selectedOption === 'Cpp' ? 'C++' : selectedOption}
         </h1>
         <p className="mt-6 text-xl leading-8 text-gray-700">
           {/* Add some introductory content here if needed */}
@@ -2150,16 +2149,16 @@ export default function Learn() {
           {info && info.length > 0 && selectedOption !== 'Welcome' ? (
             info.map((section, index) => (
 
-              <div key = {index} className='p-5 lg:grid lg:grid-cols-8 lg:gap-4 lg:items-start'>
+              <div key = {index} className=' lg:grid lg:grid-cols-8 lg:gap-8 lg:items-start'>
               <div key={index} className=" lg:col-span-4 items-start">
-                <h2 className="p-3 text-2xl font-bold tracking-tight text-gray-900 items-start">
+                <h2 className=" py-5 text-2xl font-bold tracking-tight text-gray-900 items-start">
                   {section.topic}
                 </h2>
-                <p className="p-3 text-lg leading-7 text-gray-700">
+                <p className=" py-5 text-lg leading-7 text-gray-700">
                   {section.details}
                 </p>
                 </div>
-                <div className='lg:col-span-4'>
+                <div className='py-5 lg:col-span-4'>
                 <CodeSnippet code={section.CodeSnippet} language={selectedOption.toLowerCase()} />
               </div>
               </div>
@@ -2200,6 +2199,7 @@ export default function Learn() {
 </div>
 
       </div>
+
     </>
   )
 }
