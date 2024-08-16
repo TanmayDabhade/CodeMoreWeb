@@ -24,7 +24,7 @@ export default function Community() {
           <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
             <div className="flex lg:flex-1">
               <Link to="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">CodeMore</span>
                 <h1 className='text-xl font-bold text-indigo-700'>CodeMore</h1>
               </Link>
             </div>

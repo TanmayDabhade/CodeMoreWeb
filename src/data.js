@@ -3,7 +3,7 @@ const infoData = {
   Python: [
     {
       "topic": "Introduction",
-      "details": "Python is a high-level, interpreted programming language. Created by Guido van Rossum and first released in 1991. Known for its easy-to-read syntax and dynamic typing.",
+      "details": "Python is a high-level, interpreted programming language, created by Guido van Rossum and first released in 1991. It's renowned for its clear syntax and dynamic typing, making it accessible and versatile for developers.",
       "CodeSnippet":
         `
         # A simple Python program
@@ -12,7 +12,7 @@ const infoData = {
     },
     {
       "topic": "Variables and Data Types",
-      "details": "Variables store data values and are created by assignment. Common data types include int (integer), float (floating point number), str (string), and bool (boolean). Python uses dynamic typing, so the type of a variable is determined at runtime.",
+      "details": "Variables in Python are used to store data values and are created through assignment. Common data types include int (integer), float (floating-point number), str (string), and bool (boolean). Python uses dynamic typing, meaning the type of a variable is determined during runtime.",
       "CodeSnippet":
         `
         # Variables and data types
@@ -30,7 +30,7 @@ const infoData = {
     },
     {
       "topic": "Operators",
-      "details": "Arithmetic operators: +, -, *, /, %, **, //. Comparison operators: ==, !=, >, <, >=, <=. Logical operators: and, or, not. Assignment operators: =, +=, -=, *=, /=, etc.",
+      "details": "Python supports various operators. Arithmetic operators include +, -, *, /, %, **, //. Comparison operators include ==, !=, >, <, >=, <=. Logical operators include and, or, not. Assignment operators include =, +=, -=, *=, /=, and others.",
       "CodeSnippet":
         `
         # Arithmetic operators
@@ -65,7 +65,7 @@ const infoData = {
     },
     {
       "topic": "Control Flow",
-      "details": "Conditional statements: if, elif, else. Loops: for loop, while loop. Break and continue: used to exit a loop or skip an iteration.",
+      "details": "Python provides control flow tools like conditional statements (if, elif, else) and loops (for, while). Additionally, break and continue statements allow you to exit a loop early or skip an iteration.",
       "CodeSnippet":
         `
         # Conditional statements
@@ -97,7 +97,7 @@ const infoData = {
     },
     {
       "topic": "Functions",
-      "details": "Functions are defined using the def keyword. Functions can accept arguments and return values. Python also supports lambda (anonymous) functions.",
+      "details": "Functions in Python are defined using the def keyword. They can accept arguments and return values. Python also supports lambda (anonymous) functions, which are useful for short, throwaway functions.",
       "CodeSnippet":
         `
         # Function definition
@@ -113,7 +113,7 @@ const infoData = {
     },
     {
       "topic": "Lists and Tuples",
-      "details": "Lists are ordered, mutable collections of items defined with square brackets []. Tuples are ordered, immutable collections of items defined with parentheses (). Both lists and tuples can hold mixed data types.",
+      "details": "Lists in Python are ordered, mutable collections defined with square brackets []. Tuples, on the other hand, are ordered and immutable, defined with parentheses (). Both can hold mixed data types.",
       "CodeSnippet":
         `
         # Lists
@@ -134,7 +134,7 @@ const infoData = {
     },
     {
       "topic": "Dictionaries",
-      "details": "Dictionaries are unordered collections of key-value pairs defined with curly braces {}. Keys must be unique and can be of any immutable data type. Values can be of any data type and can be accessed via keys.",
+      "details": "Dictionaries are unordered collections of key-value pairs defined with curly braces {}. Keys must be unique and immutable, while values can be of any data type. Access and modify values using keys.",
       "CodeSnippet":
         `
         # Dictionary
@@ -156,7 +156,7 @@ const infoData = {
     },
     {
       "topic": "Sets",
-      "details": "Sets are unordered collections of unique items defined with curly braces {}. Common operations include union, intersection, and difference. Useful for membership testing and removing duplicates.",
+      "details": "Sets are unordered collections of unique items defined with curly braces {}. They are particularly useful for membership testing, removing duplicates, and performing operations like union, intersection, and difference.",
       "CodeSnippet":
         `
         # Set
@@ -177,7 +177,7 @@ const infoData = {
     },
     {
       "topic": "Input and Output",
-      "details": "Input is taken using the input() function. Output is printed using the print() function. Formatted strings can be used with f-strings or the format() method.",
+      "details": "User input is gathered using the input() function, while output is displayed using the print() function. Python supports formatted strings using f-strings or the format() method for more dynamic outputs.",
       "CodeSnippet":
         `
         # Input
@@ -194,7 +194,7 @@ const infoData = {
     },
     {
       "topic": "File Handling",
-      "details": "Files can be opened using the open() function and modes like 'r', 'w', 'a', and 'b'. Common file operations include read(), write(), and close(). The with statement is used for better file handling practices to ensure files are closed properly.",
+      "details": "Files in Python can be opened using the open() function with modes like 'r', 'w', 'a', and 'b'. Common operations include read(), write(), and close(). The with statement is recommended for handling files as it ensures they are closed properly.",
       "CodeSnippet":
         `
         # File handling using 'with'
@@ -209,7 +209,7 @@ const infoData = {
     },
     {
       "topic": "Error Handling",
-      "details": "Errors in Python are handled using try, except, else, and finally blocks. Common exceptions include ValueError, TypeError, and IndexError. Custom exceptions can be created using the raise keyword.",
+      "details": "Errors in Python are managed using try, except, else, and finally blocks. Common exceptions include ValueError, TypeError, and IndexError. Custom exceptions can be raised using the raise keyword.",
       "CodeSnippet":
         `
         # Error handling
@@ -228,7 +228,7 @@ const infoData = {
     },
     {
       "topic": "Modules and Packages",
-      "details": "Modules are files containing Python code, which can be imported using the import statement. Standard library modules like os, sys, and math provide additional functionality. Packages are directories containing multiple modules and an __init__.py file.",
+      "details": "Modules are files containing Python code that can be imported using the import statement. The standard library includes modules like os, sys, and math. Packages are directories containing multiple modules and an __init__.py file.",
       "CodeSnippet":
         `
         # Importing a module
@@ -244,7 +244,7 @@ const infoData = {
     },
     {
       "topic": "Object-Oriented Programming (OOP)",
-      "details": "Classes are defined using the class keyword and can contain methods and attributes. Objects are instances of classes. OOP concepts include inheritance, encapsulation, and polymorphism.",
+      "details": "Classes in Python are defined using the class keyword and can include methods and attributes. Objects are instances of classes. Key OOP concepts include inheritance, encapsulation, and polymorphism.",
       "CodeSnippet":
         `
         # Class definition
@@ -272,7 +272,7 @@ const infoData = {
     },
     {
       "topic": "List Comprehensions",
-      "details": "A concise way to create lists using a single line of code. Syntax: [expression for item in iterable if condition]. Useful for filtering and transforming lists.",
+      "details": "List comprehensions provide a concise way to create lists using a single line of code. The syntax is [expression for item in iterable if condition], which is useful for filtering and transforming lists.",
       "CodeSnippet":
         `
         # List comprehension
@@ -286,7 +286,7 @@ const infoData = {
     },
     {
       "topic": "Lambda Functions",
-      "details": "Anonymous functions created using the lambda keyword. Syntax: lambda arguments: expression. Commonly used in higher-order functions like map(), filter(), and reduce().",
+      "details": "Lambda functions are anonymous functions created using the lambda keyword. The syntax is lambda arguments: expression. They are commonly used in higher-order functions like map(), filter(), and reduce().",
       "CodeSnippet":
         `
         # Lambda function
@@ -301,7 +301,7 @@ const infoData = {
     },
     {
       "topic": "Common Built-in Functions",
-      "details": "len() - returns the length of an object. range() - generates a sequence of numbers. enumerate() - returns both the index and value as you loop through an iterable. zip() - combines multiple iterables into tuples.",
+      "details": "Python provides several built-in functions for common tasks. len() returns the length of an object. range() generates a sequence of numbers. enumerate() returns both the index and value when looping through an iterable. zip() combines multiple iterables into tuples.",
       "CodeSnippet":
         `
         # len()
@@ -325,7 +325,7 @@ const infoData = {
     },
     {
       "topic": "Decorators",
-      "details": "A decorator is a function that wraps another function to modify its behavior. Used for logging, enforcing access control, instrumentation, caching, etc. Syntax: @decorator_function above the target function.",
+      "details": "A decorator is a function that wraps another function to modify its behavior. Decorators are often used for logging, enforcing access control, instrumentation, and caching. Syntax: @decorator_function placed above the target function.",
       "CodeSnippet":
         `
         # Decorator function
@@ -345,7 +345,7 @@ const infoData = {
     },
     {
       "topic": "Generators",
-      "details": "Generators are a type of iterable, like lists or tuples, but generate items on the fly. Created using functions and the yield keyword. Efficient for large datasets as they produce items one at a time.",
+      "details": "Generators are a type of iterable that generate items on the fly, which is more memory-efficient than lists or tuples. They are created using functions and the yield keyword and are particularly useful for handling large datasets.",
       "CodeSnippet":
         `
         # Generator function
@@ -361,14 +361,15 @@ const infoData = {
     },
     {
       "topic": "Conclusion",
-      "details": "Python is versatile and widely used in various fields like web development, data science, automation, and AI. Strong community support and an extensive ecosystem of libraries. Understanding the basics opens doors to more advanced topics and frameworks.",
+      "details": "Python is a versatile language, widely used in fields such as web development, data science, automation, and artificial intelligence. With strong community support and an extensive ecosystem of libraries, mastering Python fundamentals is a gateway to more advanced topics and frameworks.",
       "CodeSnippet":
         `
         # Python's versatility
         print("Python is widely used in various fields like web development, data science, automation, and AI.")
         `
     }
-  ],
+],
+
 
   Cpp: [
     {
