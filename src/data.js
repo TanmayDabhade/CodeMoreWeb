@@ -1,4 +1,4 @@
-const infoData = {
+const basicData = {
   // Welcome: 'Select a language and start learning!',
   Python: [
     {
@@ -369,7 +369,6 @@ const infoData = {
         `
     }
 ],
-
 
   Cpp: [
     {
@@ -898,8 +897,7 @@ const infoData = {
       std::cout << "C++ is versatile and powerful, used in various high-performance applications." << std::endl;
       `
     }
-  ],
-
+],
 
   Swift : [
     {
@@ -1967,9 +1965,9 @@ JavaScript: [
       "topic": "Conclusion",
       "details": "Learning a programming language is a journey that involves consistent practice, exploration, and adaptation. With dedication and the right approach, you'll be able to master any programming language and apply it to build innovative solutions."
     }
-  ],
+],
   
 }
 
 
-export default infoData;
+export default basicData;

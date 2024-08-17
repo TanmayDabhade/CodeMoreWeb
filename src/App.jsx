@@ -5,6 +5,7 @@ import Home from './Home'
 import Learn from './Learn'
 import Community from './Community'
 import Undeveloped from './Undeveloped'
+import LearnAdv from './LearnAdv'
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/learn-adv" element={<LearnAdv />} />
         <Route path="/community" element={<Community />} />
         <Route path="/underprogress" element={<Undeveloped />} />
       </Routes>

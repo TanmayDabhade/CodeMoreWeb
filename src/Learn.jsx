@@ -1,17 +1,16 @@
 'use client'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+
 import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import CodeSnippet from './CodeSnippet'
-import Footer from './Footer'
+
 import infoData from './data'
 
 const navigation = [
   { name: 'Beginner', href: '/learn' },
-  { name: 'Intermediate', href: '/underprogress' },
-  { name: 'Advanced', href: '/underprogress' },
+  { name: 'Advanced', href: '/learn-adv' },
   { name: 'Projects', href: '/underprogress' },
 ]
 
@@ -66,8 +65,8 @@ export default function Learn() {
               ))}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <Link to = "/underprogress" className="text-sm font-semibold leading-6 text-gray-900">
-                Log in <span aria-hidden="true">&rarr;</span>
+              <Link to="/underprogress" className="text-sm font-semibold leading-6 text-gray-900">
+                {/* Log in <span aria-hidden="true">&rarr;</span> */}
               </Link>
             </div>
           </nav>
@@ -75,7 +74,7 @@ export default function Learn() {
             <div className="fixed inset-0 z-50" />
             <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
-                <Link to = "/underprogress" className="-m-1.5 p-1.5">
+                <Link to="/underprogress" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
                   <img
                     alt=""
@@ -107,10 +106,10 @@ export default function Learn() {
                   </div>
                   <div className="py-6">
                     <Link
-                      to = "/underprogress"
+                      to="/underprogress"
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Log in
+                      {/* Log in */}
                     </Link>
                   </div>
                 </div>
@@ -144,7 +143,7 @@ export default function Learn() {
             <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
           </svg>
         </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        {/* <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="m-5">
             <label htmlFor="assignedTo" className="block text-gray-700 text-lg font-medium mb-2">
               Choose Language
@@ -154,7 +153,7 @@ export default function Learn() {
               value={selectedOption}
               onChange={handleSelectChange}
               className="h-12 w-64 p-4.5 text-lg text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-              >
+            >
               {options.map((option) => (
                 <option key={option} value={option} className="p-2 text-lg">
                   {option}
@@ -162,59 +161,84 @@ export default function Learn() {
               ))}
             </select>
           </div>
-        </div>
+        </div> */}
 
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 lg:items-start">
-  <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl  lg:gap-x-8 lg:px-8">
-    <div className="lg:pr-4">
-      <div className="">
-        <p className="text-base font-semibold leading-7 text-indigo-600">Beginner</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          {selectedOption === 'Cpp' ? 'C++' : selectedOption}
-        </h1>
-        <p className="mt-6 text-xl leading-8 text-gray-700">
-          {/* Add some introductory content here if needed */}
-        </p>
-        <div>
-          {info && info.length > 0 && selectedOption !== 'Welcome' ? (
-            info.map((section, index) => (
+          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl  lg:gap-x-8 lg:px-8">
+            <div className="lg:pr-4">
+              <div>
+                <div className='flex justify-between'>
+                  <div className='block'>
+                    <p className="text-base font-semibold leading-7 text-indigo-600">Beginner</p>
+                    <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                      {selectedOption === 'Cpp' ? 'C++' : selectedOption}
+                    </h1>
+                    <p className="mt-6 text-xl leading-8 text-gray-700">
+                      {/* Add some introductory content here if needed */}
+                    </p>
+                  </div>
+                  <div>
+                    <div className="m-5">
+                      <label htmlFor="assignedTo" className="block text-gray-700 text-lg font-medium mb-2">
+                        Choose Language
+                      </label>
+                      <select
+                        id="assignedTo"
+                        value={selectedOption}
+                        onChange={handleSelectChange}
+                        className="h-12 w-64 p-4.5 text-lg text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                      >
+                        {options.map((option) => (
+                          <option key={option} value={option} className="p-2 text-lg">
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                </div>
 
-              <div key = {index} className=' lg:grid lg:grid-cols-8 lg:gap-8 lg:items-start'>
-              <div key={index} className=" lg:col-span-4 items-start">
-                <h2 className=" py-5 text-2xl font-bold tracking-tight text-gray-900 items-start">
-                  {section.topic}
-                </h2>
-                <p className=" py-5 text-lg leading-7 text-gray-700">
-                  {section.details}
-                </p>
+
+                <div>
+                  {info && info.length > 0 && selectedOption !== 'Welcome' ? (
+                    info.map((section, index) => (
+
+                      <div key={index} className=' lg:grid lg:grid-cols-8 lg:gap-8 lg:items-start'>
+                        <div key={index} className=" lg:col-span-4 items-start">
+                          <h2 className=" py-5 text-2xl font-bold tracking-tight text-gray-900 items-start">
+                            {section.topic}
+                          </h2>
+                          <p className=" py-5 text-lg leading-7 text-gray-700">
+                            {section.details}
+                          </p>
+                        </div>
+                        <div className='py-5 lg:col-span-4'>
+                          <CodeSnippet code={section.CodeSnippet} language={selectedOption.toLowerCase()} />
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    // <p className="text-lg text-gray-500">Please select a language to see the details.</p>
+                    info.map((section, index) => (
+                      <div key={index} className='p-5 lg:grid lg:grid-cols-8 lg:gap-4 lg:items-start'>
+                        <div key={index} className=" lg:col-span-8 items-start">
+                          <h2 className="p-3 text-2xl font-bold tracking-tight text-gray-900 items-start">
+                            {section.topic}
+                          </h2>
+                          <p className="p-3 text-lg leading-7 text-gray-700">
+                            {section.details}
+                          </p>
+                        </div>
+                        <div className='lg:col-span-4'>
+
+                        </div>
+                      </div>
+                    )))}
                 </div>
-                <div className='py-5 lg:col-span-4'>
-                <CodeSnippet code={section.CodeSnippet} language={selectedOption.toLowerCase()} />
               </div>
-              </div>
-            ))
-          ) : (
-            // <p className="text-lg text-gray-500">Please select a language to see the details.</p>
-            info.map((section, index) => (
-            <div key = {index} className='p-5 lg:grid lg:grid-cols-8 lg:gap-4 lg:items-start'>
-              <div key={index} className=" lg:col-span-8 items-start">
-                <h2 className="p-3 text-2xl font-bold tracking-tight text-gray-900 items-start">
-                  {section.topic}
-                </h2>
-                <p className="p-3 text-lg leading-7 text-gray-700">
-                  {section.details}
-                </p>
-                </div>
-                <div className='lg:col-span-4'>
-                
-              </div>
-              </div>
-          )))}
-        </div>
-      </div>
-    </div>
-    {/* code Snippet */}
-    {/* <div className="mt-16 lg:mt-0">
+            </div>
+            {/* code Snippet */}
+            {/* <div className="mt-16 lg:mt-0">
       {info && info.length > 0 ? (
         info.map((section, index) => (
           <div key={index} className="mt-16">
@@ -225,8 +249,8 @@ export default function Learn() {
         <p className="text-lg text-gray-500">Please select a language to see the code snippet.</p>
       )}
     </div> */}
-  </div>
-</div>
+          </div>
+        </div>
 
       </div>
 
