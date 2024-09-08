@@ -489,60 +489,440 @@ const AdvancedData = {
     }
   ],
 
-  Welcome: [
+  Java: [
     {
-      "topic": "Deep Dive into Language Features",
-      "details": "After mastering the basics, focus on understanding the advanced features of the language. This includes exploring language-specific optimizations, memory management, and advanced data structures."
+      topic: "Generics and Collections",
+      details: "Generics enable type-safe operations on collections, reducing runtime errors and improving code reusability.",
+      CodeSnippet: `
+        import java.util.ArrayList;
+        import java.util.List;
+
+        public class Main {
+            public static void main(String[] args) {
+                List<String> list = new ArrayList<>();
+                list.add("Hello");
+                list.add("World");
+
+                for (String str : list) {
+                    System.out.println(str);
+                }
+            }
+        }
+      `
     },
     {
-      "topic": "Performance Optimization",
-      "details": "Learn about profiling tools and techniques to identify bottlenecks in your code. Focus on optimizing algorithms, reducing memory usage, and improving runtime efficiency."
+      topic: "Streams and Lambda Expressions",
+      details: "Streams and lambda expressions provide a functional programming style for processing collections and performing operations like filtering, mapping, and reducing.",
+      CodeSnippet: `
+        import java.util.Arrays;
+        import java.util.List;
+
+        public class Main {
+            public static void main(String[] args) {
+                List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+                numbers.stream()
+                       .filter(n -> n % 2 == 0)
+                       .forEach(System.out::println);
+            }
+        }
+      `
     },
     {
-      "topic": "Concurrency and Parallelism",
-      "details": "Explore how your chosen language handles concurrent and parallel execution. Understand threading, async operations, and best practices for writing non-blocking code."
-    },
-    {
-      "topic": "Design Patterns and Architecture",
-      "details": "Study common design patterns like Singleton, Factory, Observer, and MVC/MVVM architectures. Understand when and how to apply these patterns to create scalable and maintainable codebases."
-    },
-    {
-      "topic": "Advanced Data Structures and Algorithms",
-      "details": "Go beyond basic arrays and lists to explore advanced data structures like trees, graphs, and hash tables. Study algorithms for sorting, searching, and complex operations on these data structures."
-    },
-    {
-      "topic": "Security Best Practices",
-      "details": "Learn about security vulnerabilities and best practices to secure your applications. Topics include input validation, cryptography, authentication, and secure coding standards."
-    },
-    {
-      "topic": "Frameworks and Libraries Mastery",
-      "details": "Master the popular frameworks and libraries associated with your language. Dive deep into their advanced features and understand how to extend and optimize them for your projects."
-    },
-    {
-      "topic": "Testing and Debugging",
-      "details": "Enhance your testing and debugging skills by learning about unit testing, integration testing, and test-driven development (TDD). Understand how to use advanced debugging tools to track down and fix complex bugs."
-    },
-    {
-      "topic": "Contribution to Open Source",
-      "details": "Start contributing to open-source projects. This will help you learn from real-world codebases, collaborate with other developers, and improve your coding skills."
-    },
-    {
-      "topic": "Building Complex Projects",
-      "details": "Take on complex projects that push your skills to the limit. Examples include building a compiler, a real-time multiplayer game, or a machine learning model. These projects will solidify your understanding of advanced topics."
-    },
-    {
-      "topic": "Specialization in a Niche",
-      "details": "Identify a niche area where you want to specialize, such as data science, AI, web development, or mobile apps. Focus on deepening your knowledge and building expertise in that area."
-    },
-    {
-      "topic": "Continuous Improvement",
-      "details": "Keep refining your skills by staying updated with the latest developments in your field. Regularly participate in coding challenges, hackathons, and workshops to sharpen your expertise."
-    },
-    {
-      "topic": "Mentoring and Teaching",
-      "details": "Share your knowledge by mentoring others or teaching. This not only reinforces your learning but also helps build a reputation in the community as an expert in your field."
+      topic: "Concurrency with Executors and Futures",
+      details: "Java's Executors framework simplifies the creation and management of thread pools, while Futures allow for asynchronous result handling.",
+      CodeSnippet: `
+        import java.util.concurrent.ExecutorService;
+        import java.util.concurrent.Executors;
+        import java.util.concurrent.Future;
+
+        public class Main {
+            public static void main(String[] args) throws Exception {
+                ExecutorService executor = Executors.newSingleThreadExecutor();
+
+                Future<Integer> future = executor.submit(() -> {
+                    Thread.sleep(1000);
+                    return 42;
+                });
+
+                System.out.println("Future result: " + future.get());
+
+                executor.shutdown();
+            }
+        }
+      `
     }
   ],
+
+  Kotlin: [
+    {
+      topic: "Coroutines and Asynchronous Programming",
+      details: "Kotlin's coroutines simplify asynchronous programming by providing a lightweight, non-blocking way to handle long-running tasks.",
+      CodeSnippet: `
+        import kotlinx.coroutines.*
+
+        fun main() = runBlocking {
+            launch {
+                delay(1000L)
+                println("World!")
+            }
+            println("Hello")
+        }
+      `
+    },
+    {
+      topic: "Extension Functions",
+      details: "Extension functions allow you to add new functionality to existing classes without modifying their source code, enhancing code readability and reusability.",
+      CodeSnippet: `
+        fun String.isPalindrome(): Boolean {
+            return this == this.reversed()
+        }
+
+        fun main() {
+            println("madam".isPalindrome())  // Output: true
+        }
+      `
+    },
+    {
+      topic: "Type-Safe Builders",
+      details: "Type-safe builders in Kotlin are used to create DSLs, providing a concise and type-safe way to construct complex data structures.",
+      CodeSnippet: `
+        fun html(init: HTML.() -> Unit): HTML {
+            val html = HTML()
+            html.init()
+            return html
+        }
+
+        class HTML {
+            fun body(init: Body.() -> Unit): Body {
+                val body = Body()
+                body.init()
+                return body
+            }
+        }
+
+        class Body {
+            fun p(text: String) {
+                println("Paragraph: $text")
+            }
+        }
+
+        fun main() {
+            val htmlDocument = html {
+                body {
+                    p("Hello, World!")
+                }
+            }
+        }
+      `
+    }
+  ],
+
+  Ruby: [
+    {
+      topic: "Metaprogramming",
+      details: "Ruby's metaprogramming capabilities allow you to write code that writes code, enabling dynamic method definitions and powerful DSLs.",
+      CodeSnippet: `
+        class MyClass
+          def self.create_method(name)
+            define_method(name) do
+              puts "You called #{name} method"
+            end
+          end
+        end
+
+        MyClass.create_method(:hello)
+        obj = MyClass.new
+        obj.hello  # Output: You called hello method
+      `
+    },
+    {
+      topic: "Blocks, Procs, and Lambdas",
+      details: "Ruby provides blocks, procs, and lambdas for passing code as arguments, allowing for powerful and flexible method implementations.",
+      CodeSnippet: `
+        def greet(proc)
+          proc.call
+        end
+
+        say_hello = Proc.new { puts "Hello, World!" }
+        greet(say_hello)  # Output: Hello, World!
+      `
+    },
+    {
+      topic: "Concurrency with Fibers",
+      details: "Fibers in Ruby are lightweight, cooperative threads that provide a means of handling concurrency by manually yielding control between tasks.",
+      CodeSnippet: `
+        fiber = Fiber.new do
+          puts "Fiber started"
+          Fiber.yield
+          puts "Fiber resumed"
+        end
+
+        fiber.resume
+        puts "Main program"
+        fiber.resume
+      `
+    }
+  ],
+
+  Go: [
+    {
+      topic: "Goroutines and Channels",
+      details: "Goroutines and channels in Go provide powerful concurrency primitives, allowing for easy and efficient handling of concurrent tasks.",
+      CodeSnippet: `
+        package main
+
+        import (
+            "fmt"
+            "time"
+        )
+
+        func main() {
+            c := make(chan string)
+
+            go func() {
+                time.Sleep(1 * time.Second)
+                c <- "Hello, World!"
+            }()
+
+            msg := <-c
+            fmt.Println(msg)
+        }
+      `
+    },
+    {
+      topic: "Interfaces and Polymorphism",
+      details: "Go's interfaces allow for polymorphism, enabling the creation of flexible and modular code by specifying the behavior that types must implement.",
+      CodeSnippet: `
+        package main
+
+        import "fmt"
+
+        type Speaker interface {
+            Speak() string
+        }
+
+        type Dog struct{}
+
+        func (d Dog) Speak() string {
+            return "Woof!"
+        }
+
+        type Cat struct{}
+
+        func (c Cat) Speak() string {
+            return "Meow!"
+        }
+
+        func main() {
+            var animals = []Speaker{Dog{}, Cat{}}
+
+            for _, animal := range animals {
+                fmt.Println(animal.Speak())
+            }
+        }
+      `
+    },
+    {
+      topic: "Error Handling and Defer",
+      details: "Go provides explicit error handling through return values, and the defer statement allows for resource cleanup and final actions.",
+      CodeSnippet: `
+        package main
+
+        import (
+            "fmt"
+            "os"
+        )
+
+        func main() {
+            f, err := os.Open("file.txt")
+            if err != nil {
+                fmt.Println(err)
+                return
+            }
+            defer f.Close()
+
+            // Process the file
+            fmt.Println("File opened successfully")
+        }
+      `
+    }
+  ],
+
+  Rust: [
+    {
+      topic: "Ownership and Borrowing",
+      details: "Rust's ownership and borrowing system ensures memory safety by enforcing strict rules on how memory is accessed and modified.",
+      CodeSnippet: `
+        fn main() {
+            let s1 = String::from("Hello");
+            let s2 = s1;  // s1 is moved to s2
+            println!("{}", s2);
+
+            let s3 = String::from("World");
+            let s4 = &s3;  // s3 is borrowed by s4
+            println!("{}", s4);
+        }
+      `
+    },
+    {
+      topic: "Concurrency with Threads",
+      details: "Rust provides safe concurrency with threads and channels, ensuring that data races are avoided while allowing parallel execution.",
+      CodeSnippet: `
+        use std::thread;
+
+        fn main() {
+            let handle = thread::spawn(|| {
+                for i in 1..10 {
+                    println!("Thread: {}", i);
+                }
+            });
+
+            for i in 1..5 {
+                println!("Main: {}", i);
+            }
+
+            handle.join().unwrap();
+        }
+      `
+    },
+    {
+      topic: "Traits and Generics",
+      details: "Traits in Rust allow for defining shared behavior, and generics enable writing flexible and reusable code that works across different types.",
+      CodeSnippet: `
+        struct Point<T> {
+            x: T,
+            y: T,
+        }
+
+        impl<T> Point<T> {
+            fn new(x: T, y: T) -> Self {
+                Point { x, y }
+            }
+        }
+
+        fn main() {
+            let int_point = Point::new(1, 2);
+            let float_point = Point::new(1.0, 2.0);
+
+            println!("Int Point: ({}, {})", int_point.x, int_point.y);
+            println!("Float Point: ({}, {})", float_point.x, float_point.y);
+        }
+      `
+    }
+  ],
+
+  TypeScript: [
+    {
+      topic: "Type Inference and Annotations",
+      details: "TypeScript adds type safety to JavaScript by inferring types and allowing explicit annotations, reducing runtime errors.",
+      CodeSnippet: `
+        let num: number = 42;
+        let greeting: string = "Hello, World!";
+        let isActive: boolean = true;
+
+        function add(a: number, b: number): number {
+            return a + b;
+        }
+
+        console.log(add(5, 10));  // Output: 15
+      `
+    },
+    {
+      topic: "Generics and Interfaces",
+      details: "Generics and interfaces in TypeScript allow you to create flexible and reusable components and functions, ensuring type safety across different use cases.",
+      CodeSnippet: `
+        interface Pair<T> {
+            first: T;
+            second: T;
+        }
+
+        function createPair<T>(a: T, b: T): Pair<T> {
+            return { first: a, second: b };
+        }
+
+        let stringPair = createPair("Hello", "World");
+        let numberPair = createPair(1, 2);
+
+        console.log(stringPair);  // Output: { first: 'Hello', second: 'World' }
+        console.log(numberPair);  // Output: { first: 1, second: 2 }
+      `
+    },
+    {
+      topic: "Asynchronous Programming with Promises and Async/Await",
+      details: "TypeScript provides strong typing for asynchronous code, improving the readability and maintainability of complex workflows.",
+      CodeSnippet: `
+        function fetchData(): Promise<string> {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve("Data fetched"), 2000);
+            });
+        }
+
+        async function fetchAsyncData(): Promise<void> {
+            const data = await fetchData();
+            console.log(data);
+        }
+
+        fetchAsyncData();  // Output: Data fetched
+      `
+    }
+  ],
+
+  Welcome: [
+    {
+      topic: "Deep Dive into Language Features",
+      details: "After mastering the basics, focus on understanding the advanced features of the language. This includes exploring language-specific optimizations, memory management, and advanced data structures."
+    },
+    {
+      topic: "Performance Optimization",
+      details: "Learn about profiling tools and techniques to identify bottlenecks in your code. Focus on optimizing algorithms, reducing memory usage, and improving runtime efficiency."
+    },
+    {
+      topic: "Concurrency and Parallelism",
+      details: "Explore how your chosen language handles concurrent and parallel execution. Understand threading, async operations, and best practices for writing non-blocking code."
+    },
+    {
+      topic: "Design Patterns and Architecture",
+      details: "Study common design patterns like Singleton, Factory, Observer, and MVC/MVVM architectures. Understand when and how to apply these patterns to create scalable and maintainable codebases."
+    },
+    {
+      topic: "Advanced Data Structures and Algorithms",
+      details: "Go beyond basic arrays and lists to explore advanced data structures like trees, graphs, and hash tables. Study algorithms for sorting, searching, and complex operations on these data structures."
+    },
+    {
+      topic: "Security Best Practices",
+      details: "Learn about security vulnerabilities and best practices to secure your applications. Topics include input validation, cryptography, authentication, and secure coding standards."
+    },
+    {
+      topic: "Frameworks and Libraries Mastery",
+      details: "Master the popular frameworks and libraries associated with your language. Dive deep into their advanced features and understand how to extend and optimize them for your projects."
+    },
+    {
+      topic: "Testing and Debugging",
+      details: "Enhance your testing and debugging skills by learning about unit testing, integration testing, and test-driven development (TDD). Understand how to use advanced debugging tools to track down and fix complex bugs."
+    },
+    {
+      topic: "Contribution to Open Source",
+      details: "Start contributing to open-source projects. This will help you learn from real-world codebases, collaborate with other developers, and improve your coding skills."
+    },
+    {
+      topic: "Building Complex Projects",
+      details: "Take on complex projects that push your skills to the limit. Examples include building a compiler, a real-time multiplayer game, or a machine learning model. These projects will solidify your understanding of advanced topics."
+    },
+    {
+      topic: "Specialization in a Niche",
+      details: "Identify a niche area where you want to specialize, such as data science, AI, web development, or mobile apps. Focus on deepening your knowledge and building expertise in that area."
+    },
+    {
+      topic: "Continuous Improvement",
+      details: "Keep refining your skills by staying updated with the latest developments in your field. Regularly participate in coding challenges, hackathons, and workshops to sharpen your expertise."
+    },
+    {
+      topic: "Mentoring and Teaching",
+      details: "Share your knowledge by mentoring others or teaching. This not only reinforces your learning but also helps build a reputation in the community as an expert in your field."
+    }
+  ]
+
+
   }
   
 export default AdvancedData

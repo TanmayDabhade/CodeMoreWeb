@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Home'
 import Learn from './Learn'
-import Community from './Community'
-import Undeveloped from './Undeveloped'
+// import Community from './unfinished/Community'
+import Underprogress from './components/underprogress/Underprogress'
 import LearnAdv from './LearnAdv'
+// import ProjectsPage from './ProjectView'
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -16,35 +17,10 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/learn-adv" element={<LearnAdv />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/underprogress" element={<Undeveloped />} />
+        {/* <Route path="/community" element={<Community />} /> */}
+        {/* <Route path="/projects" element={<ProjectsPage />} /> */}
+        <Route path="/underprogress" element={<Underprogress />} />
       </Routes>
     </Router>
   )
 }
-
-
-
-
-
-
-{/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}

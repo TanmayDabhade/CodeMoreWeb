@@ -1,6 +1,6 @@
 const basicData = {
   // Welcome: 'Select a language and start learning!',
-  Python: [
+Python: [
     {
       "topic": "Introduction",
       "details": "Python is a high-level, interpreted programming language, created by Guido van Rossum and first released in 1991. It's renowned for its clear syntax and dynamic typing, making it accessible and versatile for developers.",
@@ -370,7 +370,7 @@ const basicData = {
     }
 ],
 
-  Cpp: [
+Cpp: [
     {
       "topic": "Introduction",
       "details": "C++ is a high-performance, compiled programming language developed by Bjarne Stroustrup as an extension of C. First released in 1985, it supports both procedural and object-oriented programming paradigms.",
@@ -899,7 +899,7 @@ const basicData = {
     }
 ],
 
-  Swift : [
+Swift : [
     {
         "topic": "Introduction",
         "details": "Swift is a powerful and intuitive programming language developed by Apple, first released in 2014. It's designed for building apps for iOS, macOS, watchOS, and tvOS. Swift is modern, safe, and fast, with a focus on performance and safety.",
@@ -1912,7 +1912,7 @@ JavaScript: [
   }
 ],
 
-  Welcome: [
+Welcome: [
     {
       "topic": "Introduction",
       "details": "Learning a programming language involves understanding its syntax, core concepts, and practical applications. The process requires consistent practice, problem-solving, and gradually tackling more complex projects."
@@ -1966,7 +1966,1351 @@ JavaScript: [
       "details": "Learning a programming language is a journey that involves consistent practice, exploration, and adaptation. With dedication and the right approach, you'll be able to master any programming language and apply it to build innovative solutions."
     }
 ],
+Java: [
+      {
+        "topic": "Introduction",
+        "details": "Java is a high-level, class-based, object-oriented programming language developed by Sun Microsystems in 1995. It is widely used for building enterprise-scale applications and Android app development.",
+        "CodeSnippet": 
+        `
+        // A simple Java program
+        public class Main {
+            public static void main(String[] args) {
+                System.out.println("Hello, World!");
+            }
+        }
+        `
+      },
+      {
+        "topic": "Variables and Data Types",
+        "details": "In Java, variables must be declared with a specific data type. Common data types include int, float, double, char, boolean, and String. Java is statically typed, so the data type is checked at compile-time.",
+        "CodeSnippet": 
+        `
+        // Variables and data types
+        int integerVariable = 10;       // int
+        float floatVariable = 20.5f;    // float
+        double doubleVariable = 30.99;  // double
+        char charVariable = 'A';        // char
+        boolean booleanVariable = true; // boolean
   
+        // Output the variables
+        System.out.println("Integer: " + integerVariable);
+        System.out.println("Float: " + floatVariable);
+        System.out.println("Double: " + doubleVariable);
+        System.out.println("Char: " + charVariable);
+        System.out.println("Boolean: " + booleanVariable);
+        `
+      },
+      {
+        "topic": "Control Flow",
+        "details": "Java supports control flow statements like if-else, switch, for loop, while loop, and do-while loop. Break and continue statements can be used to control loop execution.",
+        "CodeSnippet": 
+        `
+        // If-else statement
+        int score = 85;
+        if (score >= 90) {
+            System.out.println("Grade: A");
+        } else if (score >= 75) {
+            System.out.println("Grade: B");
+        } else {
+            System.out.println("Grade: C");
+        }
+  
+        // For loop
+        for (int i = 0; i < 5; i++) {
+            System.out.println("For loop iteration: " + i);
+        }
+  
+        // While loop
+        int count = 5;
+        while (count > 0) {
+            System.out.println("While loop countdown: " + count);
+            count--;
+        }
+  
+        // Do-while loop
+        int j = 0;
+        do {
+            System.out.println("Do-while loop iteration: " + j);
+            j++;
+        } while (j < 5);
+  
+        // Switch statement
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good job!");
+                break;
+            case 'C':
+                System.out.println("You passed.");
+                break;
+            default:
+                System.out.println("Better luck next time.");
+        }
+        `
+      },
+      {
+        "topic": "Classes and Objects",
+        "details": "Java is an object-oriented language where classes serve as blueprints for objects. A class can contain fields (variables) and methods (functions). Objects are instances of classes.",
+        "CodeSnippet": 
+        `
+        // Class definition
+        class Dog {
+            String name;
+            int age;
+  
+            void bark() {
+                System.out.println("Woof!");
+            }
+        }
+  
+        public class Main {
+            public static void main(String[] args) {
+                Dog dog1 = new Dog();
+                dog1.name = "Buddy";
+                dog1.age = 5;
+                System.out.println("Dog's name: " + dog1.name);
+                System.out.println("Dog's age: " + dog1.age);
+                dog1.bark();
+            }
+        }
+        `
+      },
+      {
+        "topic": "Inheritance",
+        "details": "Inheritance allows a new class (subclass) to inherit properties and behavior from an existing class (superclass). Java supports single inheritance, where a class can inherit from only one superclass.",
+        "CodeSnippet": 
+        `
+        // Superclass
+        class Animal {
+            void eat() {
+                System.out.println("This animal is eating.");
+            }
+        }
+  
+        // Subclass
+        class Dog extends Animal {
+            void bark() {
+                System.out.println("Woof!");
+            }
+        }
+  
+        public class Main {
+            public static void main(String[] args) {
+                Dog dog = new Dog();
+                dog.eat();  // Inherited from Animal
+                dog.bark(); // Defined in Dog
+            }
+        }
+        `
+      },
+      {
+        "topic": "Interfaces",
+        "details": "Interfaces in Java are abstract types that allow a class to implement multiple behaviors. They can contain method signatures without implementations. A class that implements an interface must provide the method implementations.",
+        "CodeSnippet": 
+        `
+        // Interface definition
+        interface Animal {
+            void sound();
+        }
+  
+        // Implementing interface
+        class Dog implements Animal {
+            public void sound() {
+                System.out.println("Woof!");
+            }
+        }
+  
+        public class Main {
+            public static void main(String[] args) {
+                Dog dog = new Dog();
+                dog.sound();
+            }
+        }
+        `
+      },
+      {
+        "topic": "Exception Handling",
+        "details": "Java uses try, catch, finally, and throw blocks for exception handling. Exceptions are events that disrupt normal program flow. Java's checked exceptions must be caught or declared in the method signature.",
+        "CodeSnippet": 
+        `
+        // Exception handling in Java
+        public class Main {
+            public static void main(String[] args) {
+                try {
+                    int result = 10 / 0;
+                    System.out.println(result);
+                } catch (ArithmeticException e) {
+                    System.out.println("Error: Division by zero");
+                } finally {
+                    System.out.println("This block always executes");
+                }
+            }
+        }
+        `
+      },
+      {
+        "topic": "Generics",
+        "details": "Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces, and methods. This allows for code reusability and type safety. For example, a generic class can work with any data type.",
+        "CodeSnippet": 
+        `
+        // Generic class
+        class Box<T> {
+            private T value;
+  
+            public Box(T value) {
+                this.value = value;
+            }
+  
+            public T getValue() {
+                return value;
+            }
+        }
+  
+        public class Main {
+            public static void main(String[] args) {
+                Box<Integer> intBox = new Box<>(123);
+                System.out.println("Integer value: " + intBox.getValue());
+  
+                Box<String> strBox = new Box<>("Hello");
+                System.out.println("String value: " + strBox.getValue());
+            }
+        }
+        `
+      },
+      {
+        "topic": "Collections",
+        "details": "Java Collections Framework (JCF) provides a set of classes and interfaces to handle groups of objects. Common interfaces include List, Set, and Map. Common implementations are ArrayList, HashSet, and HashMap.",
+        "CodeSnippet": 
+        `
+        // Using an ArrayList
+        import java.util.ArrayList;
+        import java.util.List;
+  
+        public class Main {
+            public static void main(String[] args) {
+                List<String> fruits = new ArrayList<>();
+                fruits.add("Apple");
+                fruits.add("Banana");
+                fruits.add("Cherry");
+  
+                for (String fruit : fruits) {
+                    System.out.println(fruit);
+                }
+            }
+        }
+        `
+      },
+      {
+        "topic": "Conclusion",
+        "details": "Java is a versatile and powerful language with a rich ecosystem of libraries and frameworks. It is widely used for building enterprise applications, Android apps, and large-scale systems.",
+        "CodeSnippet": 
+        `
+        // Java conclusion statement
+        System.out.println("Java is a powerful and versatile language used in many industries.");
+        `
+      }
+],
+
+Kotlin: [
+    {
+      "topic": "Introduction",
+      "details": "Kotlin is a modern, statically typed programming language developed by JetBrains. It is fully interoperable with Java and has become the preferred language for Android app development since 2017.",
+      "CodeSnippet": 
+      `
+      // A simple Kotlin program
+      fun main() {
+          println("Hello, World!")
+      }
+      `
+    },
+    {
+      "topic": "Variables and Data Types",
+      "details": "Kotlin uses val for immutable variables and var for mutable variables. Common data types include Int, Double, String, and Boolean. Kotlin also supports nullable types with the ? operator.",
+      "CodeSnippet": 
+      `
+      // Variables and data types
+      val immutableVariable: Int = 10
+      var mutableVariable: Double = 20.5
+      mutableVariable = 25.0
+
+      val name: String = "Tanmay"
+      var age: Int = 20
+      var isStudent: Boolean = true
+
+      println("Name: $name, Age: $age, Is Student: $isStudent")
+      println("Mutable Variable: $mutableVariable, Immutable Variable: $immutableVariable")
+      `
+    },
+    {
+      "topic": "Control Flow",
+      "details": "Kotlin provides control flow structures like if-else, when, for, while, and do-while. The when statement in Kotlin is more powerful than Java's switch statement, allowing pattern matching and range checks.",
+      "CodeSnippet": 
+      `
+      // If-else statement
+      val score = 85
+      val grade = if (score >= 90) {
+          "A"
+      } else if (score >= 75) {
+          "B"
+      } else {
+          "C"
+      }
+      println("Grade: $grade")
+
+      // When statement
+      val number = 3
+      when (number) {
+          1 -> println("One")
+          2 -> println("Two")
+          3 -> println("Three")
+          else -> println("Unknown number")
+      }
+
+      // For loop
+      for (i in 1..5) {
+          println("For loop iteration: $i")
+      }
+
+      // While loop
+      var count = 5
+      while (count > 0) {
+          println("While loop countdown: $count")
+          count--
+      }
+      `
+    },
+    {
+        "topic": "Functions",
+        "details": "Functions in Kotlin are declared using the fun keyword. Kotlin supports default arguments, named arguments, and lambda expressions. Functions can be top-level or member functions within a class.",
+        "CodeSnippet": 
+        `
+        // Function declaration
+        fun greet(name: String): String {
+            return "Hello, \$name!"
+        }
+      
+        // Function with default arguments
+        fun add(a: Int, b: Int = 5): Int {
+            return a + b
+        }
+      
+        // Lambda function
+        val square: (Int) -> Int = { it * it }
+      
+        fun main() {
+            println(greet("Tanmay"))
+            println("Add with default parameter: \${add(10)}")
+            println("Square of 5: \${square(5)}")
+        }
+        `
+      },
+      
+    {
+      "topic": "Classes and Objects",
+      "details": "Kotlin is an object-oriented language with concise syntax for defining classes. A class can have primary and secondary constructors, properties, methods, and initialization blocks.",
+      "CodeSnippet": 
+      `
+      // Class definition
+      class Dog(val name: String, var age: Int) {
+          fun bark() {
+              println("Woof!")
+          }
+      }
+
+      fun main() {
+          val dog = Dog("Buddy", 5)
+          println("Dog's name: \${dog.name}")
+          println("Dog's age: \${dog.age}")
+          dog.bark()
+      }
+      `
+    },
+    {
+      "topic": "Inheritance",
+      "details": "Kotlin supports single inheritance, where a class can inherit from a superclass. Inheritance allows a subclass to reuse code from its superclass. All classes in Kotlin are final by default; use the open keyword to make a class inheritable.",
+      "CodeSnippet": 
+      `
+      // Superclass
+      open class Animal {
+          open fun sound() {
+              println("Animal sound")
+          }
+      }
+
+      // Subclass
+      class Dog : Animal() {
+          override fun sound() {
+              println("Woof!")
+          }
+      }
+
+      fun main() {
+          val dog = Dog()
+          dog.sound()  // Outputs: Woof!
+      }
+      `
+    },
+    {
+      "topic": "Extensions",
+      "details": "Kotlin extensions allow you to add new functionality to existing classes without modifying their source code. Extension functions and properties are powerful tools for enhancing classes.",
+      "CodeSnippet": 
+      `
+      // Extension function
+      fun String.lastChar(): Char {
+          return this[this.length - 1]
+      }
+
+      fun main() {
+          val name = "Tanmay"
+          println("Last character of name: \${name.lastChar()}")
+      }
+      `
+    },
+    {
+      "topic": "Data Classes",
+      "details": "Data classes in Kotlin are a concise way to create classes that hold data. They automatically generate useful methods like equals(), hashCode(), toString(), and copy().",
+      "CodeSnippet": 
+      `
+      // Data class
+      data class Person(val name: String, val age: Int)
+
+      fun main() {
+          val person = Person("Tanmay", 20)
+          println("Person: $person")
+          val olderPerson = person.copy(age = 21)
+          println("Older Person: $olderPerson")
+      }
+      `
+    },
+    {
+      "topic": "Null Safety",
+      "details": "Kotlin has built-in null safety features to reduce the risk of null pointer exceptions. Nullable types are denoted with a ? and can be handled with safe calls, Elvis operators, or explicit null checks.",
+      "CodeSnippet": 
+      `
+      // Nullable type
+      var name: String? = "Tanmay"
+      println(name?.length)
+
+      // Elvis operator
+      val length = name?.length ?: 0
+      println("Length: $length")
+
+      // Null check
+      if (name != null) {
+          println("Name is not null")
+      } else {
+          println("Name is null")
+      }
+      `
+    },
+    {
+      "topic": "Conclusion",
+      "details": "Kotlin is a modern, expressive language that enhances productivity and safety. Its concise syntax, powerful features, and seamless Java interoperability make it a top choice for Android and JVM development.",
+      "CodeSnippet": 
+      `
+      // Kotlin conclusion statement
+      println("Kotlin is a modern, powerful language perfect for Android and JVM development.")
+      `
+    }
+],
+
+Ruby: [
+    {
+      "topic": "Introduction",
+      "details": "Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. It was created by Yukihiro Matsumoto in 1995 and is best known for its use in web development with the Ruby on Rails framework.",
+      "CodeSnippet": 
+      `
+      # A simple Ruby program
+      puts "Hello, World!"
+      `
+    },
+    {
+      "topic": "Variables and Data Types",
+      "details": "In Ruby, variables are dynamically typed, and there are no strict data type declarations. Common data types include Integer, Float, String, Boolean, Array, Hash, and Symbol.",
+      "CodeSnippet": 
+      `
+      # Variables and data types
+      integer_variable = 10        # Integer
+      float_variable = 20.5        # Float
+      string_variable = "Ruby"     # String
+      boolean_variable = true      # Boolean
+
+      # Output the variables
+      puts integer_variable
+      puts float_variable
+      puts string_variable
+      puts boolean_variable
+      `
+    },
+    {
+      "topic": "Control Flow",
+      "details": "Ruby supports control flow with if-else statements, case (similar to switch in other languages), and loops like while, until, and for. It also includes the powerful block structure, allowing for iteration and custom control structures.",
+      "CodeSnippet": 
+      `
+      # If-else statement
+      score = 85
+      if score >= 90
+        puts "Grade: A"
+      elsif score >= 75
+        puts "Grade: B"
+      else
+        puts "Grade: C"
+      end
+
+      # Case statement
+      grade = 'A'
+      case grade
+      when 'A'
+        puts "Excellent!"
+      when 'B'
+        puts "Good job!"
+      else
+        puts "You passed."
+      end
+
+      # While loop
+      count = 5
+      while count > 0
+        puts count
+        count -= 1
+      end
+      `
+    },
+    {
+      "topic": "Methods",
+      "details": "Methods in Ruby are defined using the def keyword. They can accept arguments, return values, and have implicit returns (the last evaluated expression is returned automatically).",
+      "CodeSnippet": 
+      `
+      # Method definition
+      def greet(name)
+        "Hello, #{name}!"
+      end
+
+      puts greet("Tanmay")
+
+      # Method with default argument
+      def add(a, b = 5)
+        a + b
+      end
+
+      puts add(10)
+      `
+    },
+    {
+      "topic": "Arrays and Hashes",
+      "details": "Arrays in Ruby are ordered, integer-indexed collections, while hashes are key-value pairs similar to dictionaries in other languages. Arrays and hashes can store any type of object.",
+      "CodeSnippet": 
+      `
+      # Array
+      fruits = ["apple", "banana", "cherry"]
+      fruits << "orange"  # Adding an item
+      puts fruits
+
+      # Hash
+      person = {name: "Tanmay", age: 20, city: "East Lansing"}
+      puts person[:name]
+
+      # Adding to a hash
+      person[:email] = "tanmay@example.com"
+      puts person
+      `
+    },
+    {
+      "topic": "Blocks, Procs, and Lambdas",
+      "details": "Ruby uses blocks, procs, and lambdas for handling anonymous functions and closures. Blocks are the simplest form and can be passed to methods using curly braces or do-end.",
+      "CodeSnippet": 
+      `
+      # Block example
+      [1, 2, 3].each { |n| puts n }
+
+      # Proc example
+      my_proc = Proc.new { |x| puts x * 2 }
+      my_proc.call(5)
+
+      # Lambda example
+      my_lambda = ->(x) { puts x * 2 }
+      my_lambda.call(5)
+      `
+    },
+    {
+      "topic": "Classes and Objects",
+      "details": "Ruby is a fully object-oriented language. Classes are defined using the class keyword, and objects are instances of classes. Ruby supports inheritance, encapsulation, and polymorphism.",
+      "CodeSnippet": 
+      `
+      # Class definition
+      class Dog
+        attr_accessor :name, :age
+
+        def initialize(name, age)
+          @name = name
+          @age = age
+        end
+
+        def bark
+          "Woof!"
+        end
+      end
+
+      dog1 = Dog.new("Buddy", 5)
+      puts dog1.name
+      puts dog1.bark
+      `
+    },
+    {
+      "topic": "Modules and Mixins",
+      "details": "Modules in Ruby are collections of methods and constants that can be included in classes using mixins. This allows for shared functionality across different classes without using inheritance.",
+      "CodeSnippet": 
+      `
+      # Module definition
+      module Greetable
+        def greet
+          "Hello!"
+        end
+      end
+
+      class Person
+        include Greetable
+      end
+
+      person = Person.new
+      puts person.greet
+      `
+    },
+    {
+      "topic": "Exception Handling",
+      "details": "Ruby handles exceptions using begin-rescue-ensure blocks. Custom exceptions can be created by subclassing the StandardError class.",
+      "CodeSnippet": 
+      `
+      # Exception handling
+      begin
+        result = 10 / 0
+      rescue ZeroDivisionError
+        puts "Cannot divide by zero!"
+      ensure
+        puts "This runs regardless of success or error."
+      end
+
+      # Custom exception
+      class CustomError < StandardError; end
+
+      begin
+        raise CustomError, "A custom error occurred!"
+      rescue CustomError => e
+        puts e.message
+      end
+      `
+    },
+    {
+      "topic": "Conclusion",
+      "details": "Ruby is a powerful, dynamic language that is well-suited for web development, automation, and data processing. Its elegant syntax and strong community make it a great choice for beginners and experienced developers alike.",
+      "CodeSnippet": 
+      `
+      # Ruby conclusion statement
+      puts "Ruby is a powerful and elegant language, perfect for web development and automation."
+      `
+    }
+],
+
+Go: [
+    {
+      "topic": "Introduction",
+      "details": "Go, also known as Golang, is a statically typed, compiled language designed by Google. It is known for its simplicity, efficiency, and powerful concurrency features, making it ideal for large-scale distributed systems.",
+      "CodeSnippet": 
+      `
+      // A simple Go program
+      package main
+
+      import "fmt"
+
+      func main() {
+          fmt.Println("Hello, World!")
+      }
+      `
+    },
+    {
+      "topic": "Variables and Data Types",
+      "details": "In Go, variables can be declared using the var keyword or shorthand notation with :=. Common data types include int, float64, string, and bool. Go is statically typed, and types are inferred or explicitly declared.",
+      "CodeSnippet": 
+      `
+      // Variables and data types
+      var integerVariable int = 10
+      floatVariable := 20.5
+      stringVariable := "Go"
+      booleanVariable := true
+
+      // Output the variables
+      fmt.Println(integerVariable)
+      fmt.Println(floatVariable)
+      fmt.Println(stringVariable)
+      fmt.Println(booleanVariable)
+      `
+    },
+    {
+      "topic": "Control Flow",
+      "details": "Go supports control flow with if-else statements, switch statements, and loops like for. Unlike other languages, Go does not have a while or do-while loop; the for loop is used in all looping scenarios.",
+      "CodeSnippet": 
+      `
+      // If-else statement
+      score := 85
+      if score >= 90 {
+          fmt.Println("Grade: A")
+      } else if score >= 75 {
+          fmt.Println("Grade: B")
+      } else {
+          fmt.Println("Grade: C")
+      }
+
+      // Switch statement
+      grade := 'A'
+      switch grade {
+      case 'A':
+          fmt.Println("Excellent!")
+      case 'B':
+          fmt.Println("Good job!")
+      default:
+          fmt.Println("You passed.")
+      }
+
+      // For loop
+      for i := 0; i < 5; i++ {
+          fmt.Println("For loop iteration:", i)
+      }
+      `
+    },
+    {
+      "topic": "Functions",
+      "details": "Functions in Go are defined using the func keyword. Go supports multiple return values, named return values, and variadic functions. Functions are first-class citizens and can be passed around as variables.",
+      "CodeSnippet": 
+      `
+      // Function definition
+      func greet(name string) string {
+          return "Hello, " + name + "!"
+      }
+
+      // Function with multiple return values
+      func add(a, b int) (int, string) {
+          return a + b, "Success"
+      }
+
+      func main() {
+          fmt.Println(greet("Tanmay"))
+          sum, message := add(10, 20)
+          fmt.Println("Sum:", sum, "Message:", message)
+      }
+      `
+    },
+    {
+      "topic": "Arrays and Slices",
+      "details": "Arrays in Go have a fixed size and are defined with square brackets []. Slices are more flexible, allowing dynamic resizing and are backed by arrays. Slices are the preferred way to work with sequences in Go.",
+      "CodeSnippet": 
+      `
+      // Array
+      var fruits [3]string
+      fruits[0] = "Apple"
+      fruits[1] = "Banana"
+      fruits[2] = "Cherry"
+
+      // Slice
+      numbers := []int{1, 2, 3, 4, 5}
+
+      fmt.Println("Fruits array:", fruits)
+      fmt.Println("Numbers slice:", numbers)
+      `
+    },
+    {
+      "topic": "Maps",
+      "details": "Maps in Go are unordered collections of key-value pairs, similar to dictionaries in other languages. They are defined using the map keyword, and keys can be of any comparable type.",
+      "CodeSnippet": 
+      `
+      // Map creation
+      person := map[string]int{
+          "Age":  20,
+          "Year": 2023,
+      }
+      fmt.Println(person)
+
+      // Adding to a map
+      person["Month"] = 8
+      fmt.Println(person)
+
+      // Iterating over a map
+      for key, value := range person {
+          fmt.Println(key, value)
+      }
+      `
+    },
+    {
+      "topic": "Structs and Interfaces",
+      "details": "Structs in Go are collections of fields that can hold different types. They are the primary way to group related data. Interfaces are types that specify method signatures and are satisfied implicitly.",
+      "CodeSnippet": 
+      `
+      // Struct definition
+      type Person struct {
+          Name string
+          Age  int
+      }
+
+      // Interface definition
+      type Greetable interface {
+          Greet() string
+      }
+
+      // Implementing the interface
+      func (p Person) Greet() string {
+          return "Hello, my name is " + p.Name
+      }
+
+      func main() {
+          person := Person{"Tanmay", 20}
+          fmt.Println(person.Greet())
+      }
+      `
+    },
+    {
+      "topic": "Concurrency",
+      "details": "Go's concurrency model is based on goroutines and channels. Goroutines are lightweight threads managed by the Go runtime, and channels are used to communicate between them, making concurrent programming straightforward.",
+      "CodeSnippet": 
+      `
+      // Goroutine example
+      func sayHello() {
+          fmt.Println("Hello!")
+      }
+
+      func main() {
+          go sayHello()  // Starts a new goroutine
+          fmt.Println("Main function")
+      }
+      `
+    },
+    {
+      "topic": "Error Handling",
+      "details": "Go uses a simple error handling model with error values. Functions that might encounter errors return an error as their last return value, which should be checked by the caller.",
+      "CodeSnippet": 
+      `
+      // Error handling in Go
+      func divide(a, b int) (int, error) {
+          if b == 0 {
+              return 0, fmt.Errorf("division by zero")
+          }
+          return a / b, nil
+      }
+
+      func main() {
+          result, err := divide(10, 0)
+          if err != nil {
+              fmt.Println("Error:", err)
+          } else {
+              fmt.Println("Result:", result)
+          }
+      }
+      `
+    },
+    {
+      "topic": "Conclusion",
+      "details": "Go is a powerful language for building scalable and efficient applications. Its simplicity, strong concurrency support, and fast compile times make it an excellent choice for modern software development.",
+      "CodeSnippet": 
+      `
+      // Go conclusion statement
+      fmt.Println("Go is an efficient and modern language, perfect for large-scale distributed systems.")
+      `
+    }
+],
+
+Rust: [
+    {
+      "topic": "Introduction",
+      "details": "Rust is a systems programming language that focuses on safety, speed, and concurrency. Developed by Mozilla Research, Rust is designed to prevent memory safety issues and has a growing ecosystem for web assembly, systems programming, and game development.",
+      "CodeSnippet": 
+      `
+      // A simple Rust program
+      fn main() {
+          println!("Hello, World!");
+      }
+      `
+    },
+    {
+      "topic": "Variables and Data Types",
+      "details": "Rust is statically typed, and variables are immutable by default, declared with let. Data types include scalar types like integers, floating-point numbers, booleans, and characters, as well as compound types like tuples and arrays.",
+      "CodeSnippet": 
+      `
+      // Variables and data types
+      let x: i32 = 10;
+      let y = 20.5;
+      let name = "Rust";
+      let is_safe = true;
+
+      println!("x: {}, y: {}, name: {}, is_safe: {}", x, y, name, is_safe);
+
+      // Mutable variable
+      let mut z = 30;
+      println!("z before: {}", z);
+      z = 40;
+      println!("z after: {}", z);
+      `
+    },
+    {
+      "topic": "Control Flow",
+      "details": "Rust supports control flow with if-else statements, match expressions (similar to switch), and loops like for, while, and loop (an infinite loop that can be exited with break).",
+      "CodeSnippet": 
+      `
+      // If-else statement
+      let score = 85;
+      if score >= 90 {
+          println!("Grade: A");
+      } else if score >= 75 {
+          println!("Grade: B");
+      } else {
+          println!("Grade: C");
+      }
+
+      // Match expression
+      let grade = 'A';
+      match grade {
+          'A' => println!("Excellent!"),
+          'B' => println!("Good job!"),
+          _ => println!("You passed."),
+      }
+
+      // For loop
+      for i in 1..5 {
+          println!("For loop iteration: {}", i);
+      }
+
+      // While loop
+      let mut count = 5;
+      while count > 0 {
+          println!("While loop countdown: {}", count);
+          count -= 1;
+      }
+      `
+    },
+    {
+      "topic": "Functions",
+      "details": "Functions in Rust are defined using the fn keyword. Rust supports return types, function parameters, and is strongly typed, so return types must be specified. Functions can also return multiple values using tuples.",
+      "CodeSnippet": 
+      `
+      // Function definition
+      fn greet(name: &str) -> String {
+          format!("Hello, {}!", name)
+      }
+
+      // Function returning multiple values using a tuple
+      fn calculate(a: i32, b: i32) -> (i32, i32, i32) {
+          let sum = a + b;
+          let product = a * b;
+          let difference = a - b;
+          (sum, product, difference)
+      }
+
+      fn main() {
+          println!("{}", greet("Tanmay"));
+          let (sum, product, difference) = calculate(10, 20);
+          println!("Sum: {}, Product: {}, Difference: {}", sum, product, difference);
+      }
+      `
+    },
+    {
+      "topic": "Ownership and Borrowing",
+      "details": "Rust’s unique ownership system ensures memory safety without a garbage collector. Each value in Rust has a single owner, and Rust uses borrowing (references) to allow multiple parts of a program to access data without ownership conflicts.",
+      "CodeSnippet": 
+      `
+      // Ownership example
+      fn main() {
+          let s1 = String::from("hello");
+          let s2 = s1; // s1's value is moved to s2
+          // println!("{}", s1); // Error! s1 is no longer valid
+
+          let s3 = String::from("world");
+          let s4 = &s3; // s3 is borrowed
+          println!("s3: {}, s4: {}", s3, s4); // s3 is still valid
+      }
+      `
+    },
+    {
+      "topic": "Structs and Enums",
+      "details": "Structs in Rust are custom data types that allow you to group related data together. Enums allow you to define a type by enumerating its possible values. Rust enums are more powerful than those in many other languages because they can hold data.",
+      "CodeSnippet": 
+      `
+      // Struct definition
+      struct Person {
+          name: String,
+          age: u8,
+      }
+
+      // Enum definition
+      enum Message {
+          Quit,
+          Move { x: i32, y: i32 },
+          Write(String),
+          ChangeColor(i32, i32, i32),
+      }
+
+      fn main() {
+          // Creating a struct instance
+          let person = Person { name: String::from("Tanmay"), age: 20 };
+          println!("Name: {}, Age: {}", person.name, person.age);
+
+          // Using an enum
+          let msg = Message::Move { x: 10, y: 20 };
+          match msg {
+              Message::Quit => println!("Quit"),
+              Message::Move { x, y } => println!("Move to x: {}, y: {}", x, y),
+              Message::Write(text) => println!("Write: {}", text),
+              Message::ChangeColor(r, g, b) => println!("Change color to rgb({}, {}, {})", r, g, b),
+          }
+      }
+      `
+    },
+    {
+      "topic": "Error Handling",
+      "details": "Rust uses Result and Option types for error handling instead of exceptions. Result is used for functions that can return an error, while Option is used for values that can be null.",
+      "CodeSnippet": 
+      `
+      // Error handling in Rust
+      fn divide(a: i32, b: i32) -> Result<i32, String> {
+          if b == 0 {
+              return Err(String::from("Division by zero"));
+          }
+          Ok(a / b)
+      }
+
+      fn main() {
+          match divide(10, 0) {
+              Ok(result) => println!("Result: {}", result),
+              Err(e) => println!("Error: {}", e),
+          }
+      }
+      `
+    },
+    {
+      "topic": "Concurrency",
+      "details": "Rust provides thread-based concurrency with the standard library. Threads in Rust are managed using the std::thread module. Rust's ownership and type system help prevent common concurrency bugs.",
+      "CodeSnippet": 
+      `
+      use std::thread;
+      use std::time::Duration;
+
+      fn main() {
+          let handle = thread::spawn(|| {
+              for i in 1..5 {
+                  println!("Spawned thread: {}", i);
+                  thread::sleep(Duration::from_millis(500));
+              }
+          });
+
+          for i in 1..5 {
+              println!("Main thread: {}", i);
+              thread::sleep(Duration::from_millis(500));
+          }
+
+          handle.join().unwrap(); // Wait for the spawned thread to finish
+      }
+      `
+    },
+    {
+      "topic": "Generics",
+      "details": "Generics in Rust allow you to write functions and structs that can operate on multiple types while still retaining strong type safety. Generics are used extensively in Rust’s standard library, including in collections and option types.",
+      "CodeSnippet": 
+      `
+      // Generic function
+      fn largest<T: PartialOrd>(list: &[T]) -> &T {
+          let mut largest = &list[0];
+          for item in list.iter() {
+              if item > largest {
+                  largest = item;
+              }
+          }
+          largest
+      }
+
+      fn main() {
+          let numbers = vec![1, 2, 3, 4, 5];
+          let result = largest(&numbers);
+          println!("The largest number is {}", result);
+
+          let chars = vec!['a', 'b', 'c', 'd', 'e'];
+          let result = largest(&chars);
+          println!("The largest char is {}", result);
+      }
+      `
+    },
+    {
+      "topic": "Conclusion",
+      "details": "Rust is a modern systems programming language that provides memory safety without sacrificing performance. Its unique ownership model, strong type system, and focus on concurrency make it an excellent choice for systems programming, web assembly, and more.",
+      "CodeSnippet": 
+      `
+      // Rust conclusion statement
+      println!("Rust is a modern, safe, and fast systems programming language, perfect for a wide range of applications.");
+      `
+    }
+],
+
+TypeScript: [
+    {
+      "topic": "Introduction",
+      "details": "TypeScript is a statically typed superset of JavaScript developed by Microsoft. It adds optional static typing to JavaScript, allowing developers to catch errors early during development. TypeScript code compiles to plain JavaScript, making it compatible with any JavaScript environment.",
+      "CodeSnippet": 
+      `
+      // A simple TypeScript program
+      let message: string = "Hello, TypeScript!";
+      console.log(message);
+      `
+    },
+    {
+      "topic": "Variables and Data Types",
+      "details": "TypeScript supports static typing, which means you can declare the type of a variable. Common types include string, number, boolean, array, tuple, enum, and any. TypeScript also supports type inference.",
+      "CodeSnippet": 
+      `
+      // Variables and data types
+      let name: string = "Tanmay";
+      let age: number = 20;
+      let isStudent: boolean = true;
+
+      // Array
+      let fruits: string[] = ["Apple", "Banana", "Cherry"];
+
+      // Tuple
+      let person: [string, number] = ["Tanmay", 20];
+
+      // Enum
+      enum Color { Red, Green, Blue }
+      let favoriteColor: Color = Color.Green;
+
+      console.log(name, age, isStudent, fruits, person, favoriteColor);
+      `
+    },
+    {
+      "topic": "Functions",
+      "details": "TypeScript functions can have typed parameters and return types. TypeScript also supports optional parameters, default parameters, and rest parameters. Function overloading is also supported.",
+      "CodeSnippet": 
+      `
+      // Function with typed parameters and return type
+      function greet(name: string): string {
+          return "Hello, " + name + "!";
+      }
+
+      // Function with optional and default parameters
+      function add(a: number, b: number = 5): number {
+          return a + b;
+      }
+
+      // Function overloading
+      function combine(a: string, b: string): string;
+      function combine(a: number, b: number): number;
+      function combine(a: any, b: any): any {
+          return a + b;
+      }
+
+      console.log(greet("Tanmay"));
+      console.log(add(10));
+      console.log(combine(5, 10));
+      console.log(combine("Hello, ", "TypeScript"));
+      `
+    },
+    {
+      "topic": "Interfaces",
+      "details": "Interfaces in TypeScript define the structure that objects must follow. They can include properties, methods, and index signatures. Interfaces can be implemented by classes or extended by other interfaces.",
+      "CodeSnippet": 
+      `
+      // Interface definition
+      interface Person {
+          name: string;
+          age: number;
+          greet(): string;
+      }
+
+      // Implementing an interface
+      const person: Person = {
+          name: "Tanmay",
+          age: 20,
+          greet: function() {
+              return "Hello, my name is " + this.name;
+          }
+      };
+
+      console.log(person.greet());
+
+      // Interface extension
+      interface Student extends Person {
+          grade: string;
+      }
+
+      const student: Student = {
+          name: "John",
+          age: 21,
+          grade: "A",
+          greet: function() {
+              return "Hello, my name is " + this.name + " and I am a student.";
+          }
+      };
+
+      console.log(student.greet());
+      `
+    },
+    {
+      "topic": "Classes",
+      "details": "TypeScript classes are similar to those in other object-oriented languages. They can have properties, constructors, methods, and access modifiers (public, private, protected). TypeScript also supports inheritance and abstract classes.",
+      "CodeSnippet": 
+      `
+      // Class definition
+      class Person {
+          name: string;
+          age: number;
+
+          constructor(name: string, age: number) {
+              this.name = name;
+              this.age = age;
+          }
+
+          greet(): string {
+              return "Hello, my name is " + this.name;
+          }
+      }
+
+      const person = new Person("Tanmay", 20);
+      console.log(person.greet());
+
+      // Inheritance
+      class Student extends Person {
+          grade: string;
+
+          constructor(name: string, age: number, grade: string) {
+              super(name, age);
+              this.grade = grade;
+          }
+
+          greet(): string {
+              return "Hello, my name is " + this.name + " and I am a student.";
+          }
+      }
+
+      const student = new Student("John", 21, "A");
+      console.log(student.greet());
+      `
+    },
+    {
+      "topic": "Generics",
+      "details": "Generics in TypeScript allow you to create components that can work with a variety of types. This makes your code more flexible and reusable. Generics can be used with functions, classes, and interfaces.",
+      "CodeSnippet": 
+      `
+      // Generic function
+      function identity<T>(arg: T): T {
+          return arg;
+      }
+
+      let output1 = identity<string>("Hello, TypeScript");
+      let output2 = identity<number>(123);
+
+      console.log(output1, output2);
+
+      // Generic class
+      class Box<T> {
+          contents: T;
+
+          constructor(contents: T) {
+              this.contents = contents;
+          }
+
+          getContents(): T {
+              return this.contents;
+          }
+      }
+
+      let stringBox = new Box<string>("Hello");
+      console.log(stringBox.getContents());
+
+      let numberBox = new Box<number>(123);
+      console.log(numberBox.getContents());
+      `
+    },
+    {
+      "topic": "Modules",
+      "details": "TypeScript modules help organize code by splitting it into separate files. Modules can export classes, interfaces, functions, and variables, which can then be imported by other modules.",
+      "CodeSnippet": 
+      `
+      // Module file: math.ts
+      export function add(a: number, b: number): number {
+          return a + b;
+      }
+
+      export function multiply(a: number, b: number): number {
+          return a * b;
+      }
+
+      // Main file: app.ts
+      import { add, multiply } from './math';
+
+      console.log("Addition:", add(2, 3));
+      console.log("Multiplication:", multiply(2, 3));
+      `
+    },
+    {
+      "topic": "Type Aliases and Union Types",
+      "details": "Type aliases in TypeScript allow you to create custom types by combining existing types. Union types allow variables to hold multiple types, increasing the flexibility of your code.",
+      "CodeSnippet": 
+      `
+      // Type alias
+      type StringOrNumber = string | number;
+
+      let value: StringOrNumber;
+
+      value = "Hello";
+      console.log(value);
+
+      value = 123;
+      console.log(value);
+
+      // Union type in a function
+      function printId(id: StringOrNumber) {
+          console.log("ID:", id);
+      }
+
+      printId("ABC123");
+      printId(12345);
+      `
+    },
+    {
+      "topic": "Decorators",
+      "details": "Decorators in TypeScript are special types of declarations that can be attached to a class, method, accessor, property, or parameter. They are often used for modifying or annotating class behavior.",
+      "CodeSnippet": 
+      `
+      // Class decorator
+      function sealed(constructor: Function) {
+          Object.seal(constructor);
+          Object.seal(constructor.prototype);
+      }
+
+      @sealed
+      class Greeter {
+          greeting: string;
+
+          constructor(message: string) {
+              this.greeting = message;
+          }
+
+          greet() {
+              return "Hello, " + this.greeting;
+          }
+      }
+
+      const greeter = new Greeter("TypeScript");
+      console.log(greeter.greet());
+      `
+    },
+    {
+      "topic": "Conclusion",
+      "details": "TypeScript extends JavaScript by adding static types, classes, interfaces, and other advanced features, making it a powerful tool for building large-scale applications. It improves developer productivity by catching errors early and providing better tooling.",
+      "CodeSnippet": 
+      `
+      // TypeScript conclusion statement
+      console.log("TypeScript enhances JavaScript by adding static types and powerful features, making it ideal for large-scale applications.");
+      `
+    }
+],
+
 }
 
 
