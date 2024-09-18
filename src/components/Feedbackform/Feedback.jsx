@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Field, Label, Switch } from '@headlessui/react'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../database/firebase' // Import Firestore instance
+import Header from '../normal/Header'
 
 export default function Feedback() {
   const [agreed, setAgreed] = useState(false)
@@ -54,7 +55,9 @@ export default function Feedback() {
   }
 
   return (
+
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      {/* <Header /> */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
