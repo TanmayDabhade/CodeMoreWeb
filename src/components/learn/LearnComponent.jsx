@@ -1,9 +1,11 @@
 // LanguageContent.js
+import CodeSandbox from '../codesnippet/CodeSandbox'
 import CodeSnippet from '../codesnippet/CodeSnippet'
 
 export default function LanguageContent({ selectedOption, info }) {
   return (
     <div>
+      
       {info && info.length > 0 && selectedOption !== 'Welcome' ? (
         info.map((section, index) => (
           <div key={index} className="lg:grid lg:grid-cols-8 lg:gap-8 lg:items-start">
@@ -16,6 +18,7 @@ export default function LanguageContent({ selectedOption, info }) {
               </p>
             </div>
             <div className="py-5 lg:col-span-4">
+            {/* <CodeSandbox language={selectedOption} code={section.CodeSnippet}/> */}
               <CodeSnippet code={section.CodeSnippet} language={selectedOption.toLowerCase()} />
             </div>
           </div>

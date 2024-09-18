@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Beginner', href: '/learn' },
   { name: 'Advanced', href: '/learn-adv' },
   { name: 'Projects', href: '/underprogress' },
+  { name: 'Submit Feedback', href: '/feedback' },
 ]
 
 export default function Header() {

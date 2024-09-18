@@ -6,7 +6,8 @@ import Learn from './Learn'
 // import Community from './unfinished/Community'
 import Underprogress from './components/underprogress/Underprogress'
 import LearnAdv from './LearnAdv'
-// import ProjectsPage from './ProjectView'
+import ProjectsPage from './ProjectView'
+import Feedback from './components/Feedbackform/Feedback'
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +19,8 @@ export default function App() {
         <Route path="/learn" element={<Learn />} />
         <Route path="/learn-adv" element={<LearnAdv />} />
         {/* <Route path="/community" element={<Community />} /> */}
-        {/* <Route path="/projects" element={<ProjectsPage />} /> */}
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/underprogress" element={<Underprogress />} />
       </Routes>
     </Router>
